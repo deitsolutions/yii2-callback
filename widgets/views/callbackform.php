@@ -27,32 +27,32 @@ $module = \Yii::$app->getModule('callback');
             ]); ?>
             <div class="modal-body">
                 <div class="row">
-                    <div class="col col-md-6">
-                        <div class="form-group">
-                            <?php echo $form->field($model, 'name')->textInput([
-                                'maxlength' => true,
-                                'placeholder' => $module->namePlaceholder,
-                            ]) ?>
-                        </div>
-                        <div class="form-group">
-                            <?php echo $form->field($model, 'phone')->textInput([
-                                'maxlength' => true,
-                                'placeholder' => $module->phonePlaceholder,
-                            ]) ?>
-                        </div>
+                        <div class="col col-md-6">
+                            <div class="form-group">
+                                <?php echo $form->field($model, 'name')->textInput([
+                                    'maxlength' => true,
+                                    'placeholder' => $module->namePlaceholder,
+                                ]) ?>
+                            </div>
+                            <div class="form-group">
+                                <?php echo $form->field($model, 'phone')->textInput([
+                                    'maxlength' => true,
+                                    'placeholder' => $module->phonePlaceholder,
+                                ]) ?>
+                            </div>
 
-                        <div class="form-group">
-                            <?php echo $form->field($model, 'time')->dropDownList($module->times) ?>
+                            <div class="form-group">
+                                <?php echo $form->field($model, 'time')->dropDownList($module->times) ?>
 
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <?php echo $form->field($model, 'message')->textArea([
-                                'rows' => 7,
-                                'placeholder' => $module->messagePlaceholder,
-                            ]) ?>
-                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <?php echo $form->field($model, 'message')->textArea([
+                                    'rows' => 7,
+                                    'placeholder' => $module->messagePlaceholder,
+                                ]) ?>
+                            </div>
                     </div>
                     <div class="col-md-12 text-center " id="callback-errorSummary"></div>
                 </div>

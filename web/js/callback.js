@@ -6,15 +6,15 @@ var callbackApp = {
 
 		var data = $('#callback-form').serialize();
 		$.ajax({
-        	url: '/frontend/web/callback/callback/create-ajax',
+        	url: '/callback/callback/create-ajax',
         	type: "POST",
         	data: data,
         	success: function (result) {
 	            if (result == 'true') {
 	            	console.log('post callback');
 					$('#modal-callback').modal('hide');
+					window.location.assign('/thankyou');
 	            } else {
-	            	$
 	            	var res = $.parseJSON(result);
 	            	$('#callback-errorSummary').empty();
 	            	$.each(res, function(key, value) {
